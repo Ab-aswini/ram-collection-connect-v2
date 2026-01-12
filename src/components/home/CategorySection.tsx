@@ -3,7 +3,7 @@ import { getSiteSettings } from "@/data/site";
 import { getImageUrl } from "@/lib/utils";
 
 const CategorySection = () => {
-  const { categories } = getSiteSettings();
+  const { categories = [] } = getSiteSettings();
 
   return (
     <section className="py-12 md:py-16 bg-background">

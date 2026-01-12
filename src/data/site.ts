@@ -27,7 +27,8 @@ export interface Promotion {
 }
 
 export const getSiteSettings = (): SiteSettings => {
-    return siteSettings as SiteSettings;
+    // Safety check: ensure siteSettings exists before casting
+    return (siteSettings || {}) as SiteSettings;
 };
 
 export const getPromotion = (): Promotion => {

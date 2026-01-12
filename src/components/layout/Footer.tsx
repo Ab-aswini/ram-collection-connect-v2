@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
 import { getImageUrl } from "@/lib/utils";
+import { getSiteSettings } from "@/data/site";
 
 const Footer = () => {
+  const { whatsappNumber } = getSiteSettings();
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="container-custom py-12 md:py-16">
@@ -102,7 +104,7 @@ const Footer = () => {
             </div>
             <div className="mt-6">
               <a
-                href="https://wa.me/919876543210?text=Hi! I'm interested in your products"
+                href={`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your products`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-whatsapp text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-whatsapp-dark transition-colors"

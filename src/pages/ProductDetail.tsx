@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { getProductById, productImages } from "@/data/products";
+import { getSiteSettings } from "@/data/site";
 import { getImageUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowLeft, Check } from "lucide-react";
@@ -29,6 +30,8 @@ const ProductDetail = () => {
     if (price === null) return "Call for Price";
     return `₹${price.toLocaleString('en-IN')}`;
   };
+
+  const { whatsappNumber } = getSiteSettings();
 
   const whatsappMessage = encodeURIComponent(
     `Hi! I'm interested in "${product.name}" (₹${product.price}). Can you share more details?`
@@ -157,7 +160,7 @@ const ProductDetail = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 pt-4">
             <a
-              href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
             >

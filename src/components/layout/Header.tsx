@@ -4,6 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { getImageUrl } from "@/lib/utils";
+import { getSiteSettings } from "@/data/site";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,6 +19,7 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { whatsappNumber } = getSiteSettings();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -107,7 +109,7 @@ const Header = () => {
                       </Button>
                     </a>
                     <a
-                      href="https://wa.me/919876543210?text=Hi! I'm interested in your products"
+                      href={`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your products`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

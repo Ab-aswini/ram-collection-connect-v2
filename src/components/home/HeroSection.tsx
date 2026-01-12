@@ -5,6 +5,7 @@ import { getSiteSettings } from "@/data/site";
 import { getImageUrl } from "@/lib/utils";
 
 const HeroSection = () => {
+  const { whatsappNumber } = getSiteSettings();
   return (
     <section className="relative bg-hero-gradient overflow-hidden">
       {/* Decorative elements */}
@@ -39,7 +40,7 @@ const HeroSection = () => {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/919876543210?text=Hi! I'm interested in your products"
+                href={`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your products`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

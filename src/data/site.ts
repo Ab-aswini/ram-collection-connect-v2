@@ -3,6 +3,7 @@ import promotions from '../content/promotions.json';
 
 export interface SiteSettings {
     brandName: string;
+    whatsappNumber: string;
     seoTitle: string;
     seoDescription: string;
     contactPhone: string;

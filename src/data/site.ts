@@ -9,6 +9,7 @@ export interface SiteSettings {
     contactPhone: string;
     contactEmail: string;
     contactAddress: string;
+    contactMapUrl: string;
     socialLinks: string[];
     heroImage: string;
     categories: {

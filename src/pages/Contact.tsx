@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { getSiteSettings } from "@/data/site";
 
 const Contact = () => {
+  const { contactMapUrl } = getSiteSettings();
   return (
     <Layout>
       {/* Header */}
@@ -106,7 +108,7 @@ const Contact = () => {
                     <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
                     <p className="text-muted-foreground text-sm">Google Maps</p>
                     <a
-                      href="https://maps.google.com"
+                      href={contactMapUrl || "https://maps.google.com"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary text-sm hover:underline"

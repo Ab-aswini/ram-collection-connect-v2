@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const NewArrivalsSection = () => {
-  const newArrivals = getNewArrivals();
+  const newArrivals = getNewArrivals() || [];
 
   return (
     <section className="py-12 md:py-16 bg-secondary">

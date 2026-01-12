@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart } from "lucide-react";
 
 const FeaturedSection = () => {
-  const featuredProducts = getFeaturedProducts();
+  const featuredProducts = getFeaturedProducts() || [];
 
   return (
     <section className="py-12 md:py-16 bg-background">

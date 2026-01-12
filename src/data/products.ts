@@ -27,14 +27,14 @@ export const productImages = {
 const productModules = import.meta.glob('@/content/products/*.json', { eager: true });
 
 // Convert the imported modules into a Product array
-export const products: Product[] = Object.entries(productModules).map(([path, module]: [string, any]) => {
+export const products: Product[] = productModules ? Object.entries(productModules).map(([path, module]: [string, any]) => {
   // Extract filename as ID (e.g., "royal-maroon-kurta-set" from ".../royal-maroon-kurta-set.json")
   const id = path.split('/').pop()?.replace('.json', '') || '';
   return {
     id,
-    ...module.default
+    ...(module?.default || {})
   };
-});
+}) : [];
 
 export const categories = [
   { id: "men", name: "Men's Wear", icon: "👔", description: "Shirts, Kurtas & More", image: productImages.men },

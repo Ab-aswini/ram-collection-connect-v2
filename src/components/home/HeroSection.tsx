@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { getSiteSettings } from "@/data/site";
+import { getImageUrl } from "@/lib/utils";
 
 const HeroSection = () => {
   return (
@@ -58,7 +59,7 @@ const HeroSection = () => {
               <div className="aspect-[4/5] rounded-2xl bg-gradient-to-b from-gold/30 to-transparent p-1">
                 <div className="w-full h-full rounded-xl overflow-hidden">
                   <img
-                    src={getSiteSettings().heroImage}
+                    src={getImageUrl(getSiteSettings().heroImage)}
                     alt="Shreeram Collection - Traditional Indian Clothing"
                     className="w-full h-full object-cover"
                   />

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Product, productImages } from "@/data/products";
+import { getImageUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Eye } from "lucide-react";
 
@@ -20,8 +21,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <div className="group bg-card border border-border rounded-2xl overflow-hidden card-hover">
       <div className="relative aspect-[4/5] overflow-hidden">
         {/* Product Image */}
-        <img 
-          src={productImage}
+        <img
+          src={getImageUrl(productImage)}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />

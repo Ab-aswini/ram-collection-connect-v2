@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { getImageUrl } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,7 +28,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-              <img src="/android-chrome-192x192.png" alt="Shreeram Collection" className="w-full h-full object-cover" />
+              <img src={getImageUrl("/android-chrome-192x192.png")} alt="Shreeram Collection" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
               <h1 className="font-display font-semibold text-lg md:text-xl text-foreground leading-tight">
@@ -74,7 +75,7 @@ const Header = () => {
                 <div className="flex flex-col gap-6 mt-8">
                   <div className="flex items-center gap-3 pb-4 border-b border-border">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-                      <img src="/android-chrome-192x192.png" alt="Shreeram Collection" className="w-full h-full object-cover" />
+                      <img src={getImageUrl("/android-chrome-192x192.png")} alt="Shreeram Collection" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h2 className="font-display font-semibold text-xl">Shreeram Collection</h2>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
+import { getImageUrl } from "@/lib/utils";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-                <img src="/android-chrome-192x192.png" alt="Shreeram Collection" className="w-full h-full object-cover" />
+                <img src={getImageUrl("/android-chrome-192x192.png")} alt="Shreeram Collection" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="font-display font-semibold text-xl">Shreeram Collection</h3>

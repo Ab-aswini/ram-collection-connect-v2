@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { getSiteSettings } from "@/data/site";
+import { getImageUrl } from "@/lib/utils";
 
 const CategorySection = () => {
   const { categories } = getSiteSettings();
@@ -23,7 +24,7 @@ const CategorySection = () => {
               <div className="bg-card border border-border rounded-2xl overflow-hidden card-hover">
                 <div className="aspect-square relative">
                   <img
-                    src={category.image}
+                    src={getImageUrl(category.image)}
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />

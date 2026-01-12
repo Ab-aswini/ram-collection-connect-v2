@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { getProductById, productImages } from "@/data/products";
+import { getImageUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowLeft, Check } from "lucide-react";
 
@@ -55,7 +56,7 @@ const ProductDetail = () => {
           <div className="space-y-4">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-secondary/20">
               <img
-                src={displayImage}
+                src={getImageUrl(displayImage)}
                 alt={product.name}
                 className="w-full h-full object-cover transition-all duration-300"
               />
@@ -75,7 +76,7 @@ const ProductDetail = () => {
                       }`}
                   >
                     <img
-                      src={img}
+                      src={getImageUrl(img)}
                       alt={`${product.name} view ${index + 1}`}
                       className="w-full h-full object-cover"
                     />

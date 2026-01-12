@@ -26,9 +26,24 @@ export interface Promotion {
     promotionType: 'banner' | 'popup';
 }
 
+const defaultSettings: SiteSettings = {
+    brandName: "Shreeram Collection",
+    whatsappNumber: "",
+    seoTitle: "Shreeram Collection",
+    seoDescription: "Fashion for Everyone",
+    contactPhone: "",
+    contactEmail: "",
+    contactAddress: "",
+    contactMapUrl: "",
+    socialLinks: [],
+    heroImage: "",
+    categories: []
+};
+
 export const getSiteSettings = (): SiteSettings => {
-    // Safety check: ensure siteSettings exists before casting
-    return (siteSettings || {}) as SiteSettings;
+    // Safety check: ensure siteSettings exists, otherwise return defaults
+    if (!siteSettings) return defaultSettings;
+    return { ...defaultSettings, ...siteSettings } as SiteSettings;
 };
 
 export const getPromotion = (): Promotion => {

@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react()],
-  base: "/ram-collection-connect/",
+  base: "/ram-collection-connect-v2/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

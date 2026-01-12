@@ -1,0 +1,45 @@
+{
+  "heroImage": "/images/whatsapp_image_2026-01-10_at_4.38.47_pm-removebg-preview.png",
+  "socialLinks": [
+    "https://instagram.com",
+    "https://facebook.com"
+  ],
+  "contactPhone": "+91 98765 43210",
+  "brandName": "Shreeram Collection",
+  "contactAddress": "123, Main Market Road, Near City Center, Your City - 123456",
+  "seoTitle": "Shreeram Collection | Fashion for Everyone",
+  "categories": [
+    {
+      "id": "men",
+      "name": "Men's Wear",
+      "description": "Shirts, Kurtas & More",
+      "image": "/images/product-mens-kurta.jpg"
+    },
+    {
+      "id": "women",
+      "name": "Ladies Wear",
+      "description": "Suits, Kurtis & Dresses",
+      "image": "/images/product-womens.jpg"
+    },
+    {
+      "id": "kids",
+      "name": "Kids Wear",
+      "description": "Ethnic & Casual Wear",
+      "image": "/images/product-kids.jpg"
+    },
+    {
+      "id": "jeans",
+      "name": "Jeans",
+      "description": "Denims for All",
+      "image": "/images/product-jeans.jpg"
+    },
+    {
+      "id": "sarees",
+      "name": "Sarees",
+      "description": "Silk & Cotton Sarees",
+      "image": "/images/product-saree.jpg"
+    }
+  ],
+  "contactEmail": "info@shreeramcollection.com",
+  "seoDescription": "Discover the latest trends in Men's, Women's, and Kids' wear at Shreeram Collection."
+}

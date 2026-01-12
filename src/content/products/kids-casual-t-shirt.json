@@ -1,0 +1,26 @@
+{
+    "name": "Kids Casual T-Shirt",
+    "category": "kids",
+    "price": 399,
+    "images": [
+        "/images/product-kids.jpg"
+    ],
+    "description": "Comfortable and colorful t-shirt for everyday wear.",
+    "sizes": [
+        "2-3Y",
+        "4-5Y",
+        "6-7Y",
+        "8-9Y",
+        "10-11Y"
+    ],
+    "colors": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+    ],
+    "fabric": "100% Cotton",
+    "isNew": false,
+    "isFeatured": false,
+    "inStock": true
+}

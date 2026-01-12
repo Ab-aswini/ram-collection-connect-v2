@@ -1,0 +1,24 @@
+{
+    "name": "Embroidered Palazzo Set",
+    "category": "women",
+    "price": 1599,
+    "images": [
+        "/images/product-womens.jpg"
+    ],
+    "description": "Trendy palazzo set with beautiful embroidery details.",
+    "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+    ],
+    "colors": [
+        "White",
+        "Black",
+        "Navy"
+    ],
+    "fabric": "Rayon",
+    "isNew": true,
+    "isFeatured": false,
+    "inStock": true
+}

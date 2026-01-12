@@ -1,0 +1,22 @@
+{
+    "name": "Designer Silk Saree",
+    "category": "sarees",
+    "price": 3999,
+    "images": [
+        "/images/product-saree.jpg"
+    ],
+    "description": "Handcrafted silk saree with traditional zari work.",
+    "sizes": [
+        "Free Size"
+    ],
+    "colors": [
+        "Red",
+        "Green",
+        "Blue",
+        "Purple"
+    ],
+    "fabric": "Pure Silk",
+    "isNew": true,
+    "isFeatured": true,
+    "inStock": true
+}

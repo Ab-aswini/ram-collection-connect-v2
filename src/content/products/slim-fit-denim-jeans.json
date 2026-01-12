@@ -1,0 +1,25 @@
+{
+    "name": "Slim Fit Denim Jeans",
+    "category": "jeans",
+    "price": 1299,
+    "images": [
+        "/images/product-jeans.jpg"
+    ],
+    "description": "Comfortable slim fit jeans with premium stretch fabric.",
+    "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+    ],
+    "colors": [
+        "Dark Blue",
+        "Light Blue",
+        "Black"
+    ],
+    "fabric": "Denim",
+    "isNew": false,
+    "isFeatured": true,
+    "inStock": true
+}

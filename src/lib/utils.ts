@@ -9,15 +9,14 @@ export function getImageUrl(path: string | undefined | null) {
   if (!path) return "";
   if (path.startsWith("http")) return path;
 
-  const baseUrl = import.meta.env.BASE_URL; // e.g. /ram-collection-connect-v2/
+  const baseUrl = import.meta.env.BASE_URL; // Now "/"
 
-  // If path already starts with base url (e.g. from CMS), return it
-  if (path.startsWith(baseUrl)) return path;
+  // If path already starts with base url, return it
+  if (path.startsWith(baseUrl) && baseUrl !== "/") return path;
 
-  // If path starts with slash but not base url (e.g. legacy data), prepend base
+  // If path starts with slash, just return it (since we are at root)
   if (path.startsWith("/")) {
-    // Strip leading slash to avoid double slash if baseUrl has trailing slash
-    return `${baseUrl}${path.slice(1)}`;
+    return path;
   }
 
   return path;

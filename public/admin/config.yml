@@ -7,7 +7,7 @@ backend:
 local_backend: true
 
 media_folder: "public/images"
-public_folder: "/ram-collection-connect-v2/images"
+public_folder: "/images"
 
 collections:
   - name: "site_settings"

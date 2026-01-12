@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-# local_backend: true
+local_backend: true
 
 media_folder: "public/images"
 public_folder: "/ram-collection-connect-v2/images"
